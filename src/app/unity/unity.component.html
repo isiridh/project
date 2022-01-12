@@ -1,0 +1,22 @@
+<div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas" width=950 height=600></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+    </div>
+    <div id="unity-warning"> </div>
+    <div id="unity-footer">
+      <div id="unity-webgl-logo"></div>
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">MFStarterKit for Unity</div>
+    </div>
+  </div>
+  
+  <div class="btn">
+    <button ibmButton="primary" size="sm" [isExpressive]="isExpressive" (click)="changeDirection('anticlockwise')" >Anticlockwise</button>
+    &nbsp;
+    <br> <br> <br>
+    <button ibmButton="primary" size="sm" [isExpressive]="isExpressive" (click)="changeDirection('clockwise')" >Clockwise</button>
+     </div>
