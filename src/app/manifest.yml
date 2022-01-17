@@ -1,0 +1,6 @@
+applications :
+- name: "carbon-angular-tutorial"
+  path : "dist/carbon-angular-tutorial"
+  memory : 256M
+  buildpack :
+  - "https://github.com/cloudfoundry/staticfile-buildpack.git"
