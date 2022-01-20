@@ -1,6 +1,6 @@
-<button  ibmButton="primary" (click)="open = true">Open</button>
+<button  ibmButton="primary" (click)="open = true">Show Modal</button>
 			<ibm-modal  [open]="open"  size="sm" >
-				<div class=container>
+				<div class=container >
 				<ibm-modal-header   >
 					<h2  class="bx--modal-header__label bx--type-delta" [style.color]="color">Login</h2>
 					<h4  class="bx--modal-header__heading bx--type-beta" [style.color]="color">Digital Twin</h4>
@@ -14,8 +14,8 @@
                      <button  ibmButton="primary" 
 			         (click)="open = false" 
 			         [attr.modal-primary-focus]="true" routerLink="/unity">
-			        
-			         Next</button> 
+			          Next</button> 
+					  
 	                </ng-container>
 			    </ibm-modal-footer>
 		</div>

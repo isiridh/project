@@ -32,9 +32,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/web_unityBuild/TemplateData/style.css"
+              "src/assets/3dSceneBuild/TemplateData/style.css"
             ],
-            "scripts": ["src/assets/web_unityBuild/Build/web_unityBuild.loader.js"]
+            "scripts": ["src/assets/3dSceneBuild/Build/3dSceneBuild.loader.js"]
           },
           "configurations": {
             "production": {

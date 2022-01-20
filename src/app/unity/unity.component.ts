@@ -15,12 +15,13 @@ export class UnityComponent implements OnInit {
    }
   
   async ngOnInit() {
-      var buildUrl = "assets/web_unityBuild/Build";
-      var loaderUrl=buildUrl + "/web_unityBuild.loader.js";
+    var scriptUrl = 'https://cdn.jsdelivr.net/npm/@microsoft/signalr@3.1.10/dist/browser/signalr.min.js';
+      var buildUrl = "assets/3dSceneBuild/Build";
+      var loaderUrl=buildUrl + "/3dSceneBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/web_unityBuild.data.unityweb",
-        frameworkUrl: buildUrl + "/web_unityBuild.framework.js.unityweb",
-        codeUrl: buildUrl + "/web_unityBuild.wasm.unityweb",
+        dataUrl: buildUrl + "/3dSceneBuild.data.unityweb",
+        frameworkUrl: buildUrl + "/3dSceneBuild.framework.js.unityweb",
+        codeUrl: buildUrl + "/3dSceneBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "IBM",
         productName: "MFStarterKit for Unity",
@@ -46,7 +47,9 @@ export class UnityComponent implements OnInit {
           canvas.style.height = "600px";
         }
         loadingBar.style.display = "block";
-  
+        var unityscript = document.createElement("script");
+        unityscript.src = scriptUrl;
+           
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
@@ -58,7 +61,9 @@ export class UnityComponent implements OnInit {
         }).catch((message) => {
           alert(message);
         });
+        document.body.appendChild(unityscript);
     }
+    
      changeDirection(dir){
        alert('cube will change direction')
      //  this.gameInstance.SendMessage('Decider Object', 'ChangeRotationDirection', 'anticlockwise')
